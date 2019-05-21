@@ -6,7 +6,7 @@ from linebot.models import *
 
 import os
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path=)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ASS_DIR = os.path.join(BASE_DIR, 'assets')
 
@@ -34,7 +34,7 @@ def handle_message(event):
         message = TemplateSendMessage(
             alt_text='男歌手',
             template=ButtonsTemplate(
-                thumbnail_image_url=url_for('assets', filename='m_singer.jpg'),
+                thumbnail_image_url=url_for('static', filename='m_singer.jpg'),
                 title='小宇',
                 text='台灣少見的奇幻風格與前衛曲風，是全方位的音樂人',
                 actions=[
