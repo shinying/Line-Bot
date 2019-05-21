@@ -6,7 +6,7 @@ from linebot.models import *
 
 import os
 
-app = Flask(__name__, static_url_path=)
+app = Flask(__name__)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ASS_DIR = os.path.join(BASE_DIR, 'assets')
 
