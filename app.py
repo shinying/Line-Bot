@@ -7,6 +7,7 @@ from linebot.models import *
 import os
 
 app = Flask(__name__)
+base_url = 'https://fake-news-linebot.herokuapp.com/files/'
 
 line_bot_api = LineBotApi('pDq55Cpri+YlG3ADO7C++ufKY0ouqcXNOATku0+0RwIMYvrnOfZPaMfjznfHyGGzbfn53zny2NEOQLWdxDnsaX3yHSDjkFv9gPmX1hD6a+5tVTjOMdwlBk5rScGo1zl5vsN24KgPscitpHF4X4rXywdB04t89/1O/w1cDnyilFU=')
 handler = WebhookHandler('13a1e740fbc927e2955de31fc7552fbd')
@@ -25,9 +26,35 @@ def callback():
     return 'OK'
 
 
-@handler.add(MessageEvent, message=TextMessage(text='你好'))
+@handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    message = TextSendMessage(text=event.message.text)
+    text = event.message.text
+    if '男' in text and '歌手' in text:
+        message = TemplateSendMessage(
+            alt_text='男歌手',
+            template=ButtonsTemplate(
+                thumbnail_image_url=base_url+'m_singer.jpg',
+                title='小宇',
+                text='台灣少見的奇幻風格與前衛曲風，是全方位的音樂人',
+                actions=[
+                    PostbackTemplateAction(
+                        label='postback',
+                        text='postback text',
+                        data='action=buy&itemid=1'
+                    ),
+                    MessageTemplateAction(
+                        label='message',
+                        text='message text'
+                    ),
+                    URITemplateAction(
+                        label='uri',
+                        uri='http://example.com/'
+                    )
+                ]
+            )
+        )
+    else:
+        message = TextSendMessage(text=event.message.text)
     line_bot_api.reply_message(event.reply_token, message)
 
 
