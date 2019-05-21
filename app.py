@@ -7,8 +7,6 @@ from linebot.models import *
 import os
 
 app = Flask(__name__)
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-ASS_DIR = os.path.join(BASE_DIR, 'assets')
 
 line_bot_api = LineBotApi('pDq55Cpri+YlG3ADO7C++ufKY0ouqcXNOATku0+0RwIMYvrnOfZPaMfjznfHyGGzbfn53zny2NEOQLWdxDnsaX3yHSDjkFv9gPmX1hD6a+5tVTjOMdwlBk5rScGo1zl5vsN24KgPscitpHF4X4rXywdB04t89/1O/w1cDnyilFU=')
 handler = WebhookHandler('13a1e740fbc927e2955de31fc7552fbd')
@@ -31,6 +29,7 @@ def callback():
 def handle_message(event):
     text = event.message.text
     if '男' in text and '歌手' in text:
+        print(url_for('static', filename='m_singer.jpg'))
         message = TemplateSendMessage(
             alt_text='男歌手',
             template=ButtonsTemplate(
