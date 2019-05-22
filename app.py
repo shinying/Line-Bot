@@ -32,7 +32,7 @@ def callback():
 
 def pick(n):
     topics = ['常見問題', '興趣', '參加過的社團', '技能', '專題', '參加過的比賽', '修過什麼課']
-    return random.choices(topics, k=n)
+    return random.sample(topics, k=n)
 
 
 @handler.add(MessageEvent, message=TextMessage)
@@ -40,7 +40,7 @@ def handle_message(event):
     text = event.message.text
     if re.match('[哈呵嘿嘻]', text) or re.match('XD+', text):
         message = TextSendMessage(text="\U00100079")
-    if re.match('.*常見問題', text):
+    elif re.match('.*常見問題', text):
         message = get_basic_ques()
     elif re.match('.*自我介紹', text):
         message = TextSendMessage(text="我從資訊技術出發，遊走於心理、設計與管理之間，致⼒於將以⼈為本的設計原則注入科技領域，並應⽤科技解決問題。\U0010008F")
@@ -72,7 +72,7 @@ def handle_message(event):
     elif re.match('.*開.*話題', text):
         topics = pick(1)
         message = TemplateSendMessage(
-            alt_text='unknown',
+            alt_text='pick',
             template=ButtonsTemplate(
                 title='開個話題',
                 text='也許我們可以來聊聊',
@@ -80,6 +80,10 @@ def handle_message(event):
                     MessageTemplateAction(
                         label=topics[0],
                         text=topics[0]
+                    ),
+                    MessageTemplateAction(
+                        label='聊過了？再來一個',
+                        text='開個話題'
                     )
                 ]
             )
