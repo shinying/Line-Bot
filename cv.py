@@ -11,7 +11,6 @@ def get_projects():
         template=CarouselTemplate(
             columns=[
                 CarouselColumn(
-                    thumbnail_image_url='',
                     title='Dance Light',
                     text='幫助聽障舞者感受音樂的燈光裝置',
                     actions=[
@@ -26,14 +25,12 @@ def get_projects():
                     ]
                 ),
                 CarouselColumn(
-                    thumbnail_image_url='',
                     title='高雄港智慧拖船調度演算法',
                     text='應用最佳化方法和訓練拖船工作時間預測模型來自動化高雄港的拖船調度，並開發模擬系統，以港區會發生的真實事件評估效能',
                     actions=[
                     ]
                 ),
                 CarouselColumn(
-                    thumbnail_image_url='https://i.imgur.com/fzRDFyE.png',
                     title='NodEverywhere',
                     text='',
                     actions=[
