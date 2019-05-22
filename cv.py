@@ -26,7 +26,7 @@ def get_projects():
                 ),
                 CarouselColumn(
                     title='高雄港智慧拖船調度演算法',
-                    text='應用最佳化方法和訓練拖船工作時間預測模型來自動化高雄港的拖船調度，並開發模擬系統，以港區會發生的真實事件評估效能（保密協定限制無法提供原始碼）',
+                    text='應用最佳化方法和拖船工作時間預測模型來自動化拖船調度，並開發模擬系統以港內突發事件評估效能（保密協定限制無原始碼）',
                     actions=[
                         URITemplateAction(
                             label='read README.md',
