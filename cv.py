@@ -26,16 +26,20 @@ def get_projects():
                 ),
                 CarouselColumn(
                     title='高雄港智慧拖船調度演算法',
-                    text='應用最佳化方法和訓練拖船工作時間預測模型來自動化高雄港的拖船調度，並開發模擬系統，以港區會發生的真實事件評估效能',
+                    text='應用最佳化方法和訓練拖船工作時間預測模型來自動化高雄港的拖船調度，並開發模擬系統，以港區會發生的真實事件評估效能（保密協定限制無法提供原始碼）',
                     actions=[
+                        URITemplateAction(
+                            label='read README.md',
+                            uri='https://hackmd.io/ptgih1aEQAWAAWQtoMrrug?view'
+                        )
                     ]
                 ),
                 CarouselColumn(
                     title='NodEverywhere',
-                    text='',
+                    text='以 Unity 建構場景實驗，測試使⽤者以視線停留、頭的指向停留和點頭三種方式選擇物件之速度和準確率。',
                     actions=[
                         URITemplateAction(
-                            label='read document',
+                            label='read paper',
                             uri='https://drive.google.com/open?id=1lqL_Yfh9MgvPunjNDeRqS8M25sZeHcF2'
                         )
                     ]
