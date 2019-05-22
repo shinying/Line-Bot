@@ -50,7 +50,7 @@ def handle_message(event):
             message = get_favor('sport')
         else:
             message = TextSendMessage(text="其他喜歡的東西還沒有加入喔～")
-    elif '社團':
+    elif '社團' in text:
         message = get_clubs()
     elif '技能' in text:
         message = get_skills()

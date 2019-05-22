@@ -18,7 +18,7 @@ def get_basic_ques():
                     text='為什麼要錄取你？'
                 ),
                 MessageTemplateAction(
-                    label='為什麼想申請 LINE TECH FRESH',
+                    label='為什麼想申請',
                     text='為什麼想申請 LINE TECH FRESH？'
                 ),
             ]
@@ -26,7 +26,7 @@ def get_basic_ques():
     )
     return message
 
-    
+
 def get_favor(kind):
     if kind == 'singer':
         message = TemplateSendMessage(
