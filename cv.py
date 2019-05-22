@@ -11,6 +11,7 @@ def get_projects():
         template=CarouselTemplate(
             columns=[
                 CarouselColumn(
+                    thumbnail_image_url='https://i.imgur.com/NQpwN8k.png',
                     title='Dance Light',
                     text='幫助聽障舞者感受音樂的燈光裝置',
                     actions=[
@@ -21,8 +22,9 @@ def get_projects():
                     ]
                 ),
                 CarouselColumn(
+                    thumbnail_image_url='https://i.imgur.com/PdGk2ga.jpg',
                     title='高雄港智慧拖船調度演算法',
-                    text='應用最佳化方法和拖船工作時間預測模型來自動化拖船調度，並開發模擬系統以港內突發事件評估效能（因保密協議無原始碼）',
+                    text='應用最佳化方法和時間預測模型來自動化拖船調度，並以模擬突發事件評估效能（因保密協議無原始碼）',
                     actions=[
                         URITemplateAction(
                             label='read README.md',
@@ -31,6 +33,7 @@ def get_projects():
                     ]
                 ),
                 CarouselColumn(
+                    thumbnail_image_url='https://i.imgur.com/fzRDFyE.png',
                     title='NodEverywhere',
                     text='以 Unity 建構場景實驗，測試使⽤者以視線停留、頭的指向停留和點頭三種方式選擇物件之速度和準確率。',
                     actions=[
@@ -63,7 +66,7 @@ def get_contests():
                     ]
                 ),
                 CarouselColumn(
-                    thumbnail_image_url='https://i.imgur.com/S0vtWir.png',
+                    thumbnail_image_url='https://i.imgur.com/7FBbPg7.png',
                     title='ChainSurance',
                     text='第二屆上海銀行滬港台金融科技創新校園競賽第四名。為小型商家、個人勞動者創造全新商業模式。',
                     actions=[
