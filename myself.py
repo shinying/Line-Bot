@@ -44,7 +44,7 @@ def get_favor(kind):
             )
         )
     elif kind == 'animal':
-        message = TextSendMessage(text="水獺！0x10008D")
+        message = TextSendMessage(text="水獺！\u10008D")
     elif kind == 'sport':
         message = TextSendMessage(text="應該是排球，不過最近也有在重訓～")
     return message
