@@ -2,7 +2,7 @@ from linebot.models import *
 
 
 def get_skills():
-    message = TextSendMessage(text="最熟悉的語言是 Python 和 C++，其他如資料分析、機器學習、區塊鏈等等熱門關鍵字都了解一點。")
+    message = TextSendMessage(text="最熟悉的語言是 Python 和 C++，其他如資料分析、機器學習、區塊鏈等等熱門科技都了解一點。")
     return message
 
 def get_projects():
@@ -87,7 +87,7 @@ def get_clubs():
         template=ButtonsTemplate(
             thumbnail_image_url='https://i.imgur.com/YBw7dzA.jpg',
             title='不一樣思考社',
-            text='我大一二在不一樣思考社擔任課程長，致力於推廣和應用設計思考。另外也參加過阿卡貝拉社、NTU Maker等社團',
+            text='我大一二參加不一樣思考社擔任課程長，致力於推廣和應用設計思考。也參加過阿卡貝拉社和NTU Maker。',
             actions=[
                 URITemplateAction(
                     label='Facebook',

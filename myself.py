@@ -5,7 +5,6 @@ def get_basic_ques():
     message = TemplateSendMessage(
         alt_text='basic',
         template=ButtonsTemplate(
-            # thumbnail_image_url='https://i.imgur.com/YBw7dzA.jpg',
             title='常見問題',
             text='以下是一些面試常見的問題',
             actions=[

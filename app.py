@@ -89,7 +89,7 @@ def handle_message(event):
         message = TemplateSendMessage(
             alt_text='unknown',
             template=ButtonsTemplate(
-                title='抱歉我沒有聽懂\U00100010',
+                title='抱歉我沒有聽懂...',
                 text='不過也許我們可以聊聊',
                 actions=[
                     MessageTemplateAction(
@@ -110,11 +110,6 @@ def handle_message(event):
 
     line_bot_api.reply_message(event.reply_token, message)
 
-
-@handler.add(FollowEvent)
-def handle_follow(event):
-    line_bot_api.reply_message(
-        event.reply_token, TextSendMessage(text='不知道聊什麼的時候，試試「開個話題」吧\U0010008A'))
 
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
