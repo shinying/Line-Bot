@@ -39,8 +39,8 @@ def handle_message(event):
         message = TextSendMessage(text="好的工程師除了要有紮實的技術硬底子，也需要有良好的團隊合作能力。在資：管 = 7:3系上課程和課堂外project的訓練下必備的能力我不會少，而我還有很多社團和校外組織的跨領域合作經驗，在溝通和表達上更具優勢。")
     elif '申請' in text:
         message = TextSendMessage(text="Line不但是台灣市佔率最高的通訊軟體，也是積極開拓新服務和跨國網路和軟體公司，我很想試試和國際級的人才並肩工作的感覺！")
-    elif '生活' in text:
-        message = TextSendMessage(text="你可以問問我喜歡的歌手、運動、動物，或參加過的社團")
+    elif '興趣' in text:
+        message = TextSendMessage(text="唱歌吧，你還可以問問我喜歡的歌手、運動、動物，或參加過的社團")
     elif ('喜歡' in text or '喜愛' in text):
         if '歌手' in text:
             message = get_favor('singer')
@@ -81,10 +81,6 @@ def handle_message(event):
                     MessageTemplateAction(
                         label='技能',
                         text='技能'
-                    ),
-                    MessageTemplateAction(
-                        label='生活小事',
-                        text='生活小事'
                     ),
                 ]
             )
