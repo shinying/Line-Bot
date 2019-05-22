@@ -15,18 +15,14 @@ def get_projects():
                     text='幫助聽障舞者感受音樂的燈光裝置',
                     actions=[
                         URITemplateAction(
-                            label='watch video',
-                            uri='https://www.youtube.com/watch?v=Yx0Welpq9NY'
-                        ),
-                        URITemplateAction(
-                            label='read document',
-                            uri='https://drive.google.com/open?id=110YDLC42UPF5E4cwvmgw3WnwZKq_24PJ'
+                            label='visit Github',
+                            uri='https://github.com/shinying/DanceLight'
                         )
                     ]
                 ),
                 CarouselColumn(
                     title='高雄港智慧拖船調度演算法',
-                    text='應用最佳化方法和拖船工作時間預測模型來自動化拖船調度，並開發模擬系統以港內突發事件評估效能（保密協定限制無原始碼）',
+                    text='應用最佳化方法和拖船工作時間預測模型來自動化拖船調度，並開發模擬系統以港內突發事件評估效能（因保密協議無原始碼）',
                     actions=[
                         URITemplateAction(
                             label='read README.md',
@@ -60,10 +56,6 @@ def get_contests():
                     title='Addon',
                     text='2018臺大、師大、臺科大三校 App 創意競賽冠軍。以手機端和網頁打造無紙化的 brainstorming 體驗',
                     actions=[
-                        URITemplateAction(
-                            label='watch video',
-                            uri='https://www.youtube.com/watch?v=IdpYBQ3P_fU&t=14s'
-                        ),
                         URITemplateAction(
                             label='visit Github',
                             uri='https://github.com/shinying/Addon'
