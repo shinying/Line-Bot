@@ -43,7 +43,7 @@ def handle_message(event):
     if re.match('.*常見問題', text):
         message = get_basic_ques()
     elif re.match('.*自我介紹', text):
-        message = TextSendMessage(text="我從資訊技術出發，遊走於心理、設計與管理之間，致⼒於將以⼈為本的設計原則注入科技領域，並應⽤科技解決問題。0x10008F")
+        message = TextSendMessage(text="我從資訊技術出發，遊走於心理、設計與管理之間，致⼒於將以⼈為本的設計原則注入科技領域，並應⽤科技解決問題。"+u"0x10008F")
     elif re.match('.*為什麼.*錄取', text):
         message = TextSendMessage(text="好的工程師除了要有紮實的技術硬底子，也需要有良好的團隊合作能力。在資：管 = 7:3系上課程和課堂外project的訓練下必備的能力我不會少，而我還有很多社團和校外組織的跨領域合作經驗，在溝通和表達上更具優勢。0x100033")
     elif re.match('.*為什麼.*申請', text):
