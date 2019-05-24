@@ -14,8 +14,8 @@ import re
 
 app = Flask(__name__)
 
-line_bot_api = LineBotApi('pDq55Cpri+YlG3ADO7C++ufKY0ouqcXNOATku0+0RwIMYvrnOfZPaMfjznfHyGGzbfn53zny2NEOQLWdxDnsaX3yHSDjkFv9gPmX1hD6a+5tVTjOMdwlBk5rScGo1zl5vsN24KgPscitpHF4X4rXywdB04t89/1O/w1cDnyilFU=')
-handler = WebhookHandler('13a1e740fbc927e2955de31fc7552fbd')
+line_bot_api = LineBotApi('********')
+handler = WebhookHandler('********')
 detector = Detector(128, 'word2vec.wv', 'lstm.h5')
 detect_mode = False
 
@@ -35,6 +35,7 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
+    global detect_mode
     text = event.msg.text
     if not detect_mode:
         if re.match('[.*你好.*]', text) or re.match('[嗨]', text) or re.match('哈囉', text):
@@ -72,7 +73,7 @@ def handle_message(event):
             msg = get_contests()
         elif re.match('.*修.*課', text):
             msg = TextSendMessage(text="系上的課程規劃是資:管 7:3，除了資工基本的線代、資結、演算法等，也有管理相關的統計、會計。另外我也選修了其他如區塊鏈、語音處理、機器學習等課程。")
-        elif re.match('呼叫阿水伯！', text):
+        elif re.match('呼叫阿水伯', text):
             msg = TextSendMessage(text="呵呵呵～阿水伯來了！我上知天文下知地理喔～不想問的時候只要說一句「問完了」，我就會叫阿信回來和你聊天啦")
             detect_mode = True
         elif re.match('.*開.*話題', text):
