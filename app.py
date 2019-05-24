@@ -36,7 +36,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     global detect_mode
-    text = event.msg.text
+    text = event.message.text
     if not detect_mode:
         if re.match('[.*你好.*]', text) or re.match('[嗨]', text) or re.match('哈囉', text):
             msg = get_greet()

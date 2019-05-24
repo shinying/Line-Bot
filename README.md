@@ -11,6 +11,8 @@ First questions are read from line bot interface. Once a question successfully m
 
 ## Special Feature
 
+[Notice: Because of the hardware on Heroku, the function is not working now, but the code should work on an server with GPU.]
+
 To demonstrate my ongoing fake news detection project, I tried making a possible user interface with line bot. When a user says "呼叫阿水伯！", the following message will be processed and classified by a currently weak classifier trained with LSTM and message data from Cofacts. The classifier then throws four kinds of outputs including "not articles", "not rumors", "personal opinions" or "rumors".
 
 However, due to the limited amount of data and deadline for this homework, the classifier got a huge room for improvement. Don't totally trust it!
