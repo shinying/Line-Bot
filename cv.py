@@ -2,11 +2,11 @@ from linebot.models import *
 
 
 def get_skills():
-    message = TextSendMessage(text="最熟悉的語言是 Python 和 C++，其他如資料分析、機器學習、區塊鏈等等熱門科技都了解一點。")
-    return message
+    msg = TextSendMessage(text="最熟悉的語言是 Python 和 C++，其他如資料分析、機器學習、區塊鏈等等熱門科技都了解一點。")
+    return msg
 
 def get_projects():
-    message = TemplateSendMessage(
+    msg = TemplateSendMessage(
         alt_text='projects',
         template=CarouselTemplate(
             columns=[
@@ -46,11 +46,11 @@ def get_projects():
             ]
         )
     )
-    return message
+    return msg
 
 
 def get_contests():
-    message = TemplateSendMessage(
+    msg = TemplateSendMessage(
         alt_text='contests',
         template=CarouselTemplate(
             columns=[
@@ -79,10 +79,10 @@ def get_contests():
             ]
         )
     )
-    return message
+    return msg
 
 def get_clubs():
-    message = TemplateSendMessage(
+    msg = TemplateSendMessage(
         alt_text='club',
         template=ButtonsTemplate(
             thumbnail_image_url='https://i.imgur.com/YBw7dzA.jpg',
@@ -96,4 +96,4 @@ def get_clubs():
             ]
         )
     )
-    return message
+    return msg
