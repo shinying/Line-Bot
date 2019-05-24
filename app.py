@@ -7,6 +7,7 @@ from linebot.models import *
 from cv import *
 from utils import *
 from detector import Detector
+from key import LINE_KEY, WEBHOOK_KEY
 
 import os
 import random
@@ -14,8 +15,8 @@ import re
 
 app = Flask(__name__)
 
-line_bot_api = LineBotApi('pDq55Cpri+YlG3ADO7C++ufKY0ouqcXNOATku0+0RwIMYvrnOfZPaMfjznfHyGGzbfn53zny2NEOQLWdxDnsaX3yHSDjkFv9gPmX1hD6a+5tVTjOMdwlBk5rScGo1zl5vsN24KgPscitpHF4X4rXywdB04t89/1O/w1cDnyilFU=')
-handler = WebhookHandler('13a1e740fbc927e2955de31fc7552fbd')
+line_bot_api = LineBotApi(LINE_KEY)
+handler = WebhookHandler(WEBHOOK_KEY)
 
 detector = Detector(128, 'word2vec.wv', 'model.h5')
 detect_mode = False
