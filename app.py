@@ -16,7 +16,7 @@ app = Flask(__name__)
 
 line_bot_api = LineBotApi('********')
 handler = WebhookHandler('********')
-detector = Detector(128, 'word2vec.wv', 'lstm.h5')
+detector = Detector(128, 'word2vec.wv', 'model.h5')
 detect_mode = False
 
 @app.route("/callback", methods=['POST'])
@@ -24,7 +24,6 @@ def callback():
     signature = request.headers['X-Line-Signature']
     body = request.get_data(as_text=True)
     app.logger.info("Request body: " + body)
-
     try:
         handler.handle(body, signature)
     except InvalidSignatureError:
